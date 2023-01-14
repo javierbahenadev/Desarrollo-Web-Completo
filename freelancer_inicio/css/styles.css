@@ -50,12 +50,17 @@ body {
     width: 90%;
     text-transform: uppercase;
     border-radius: .5rem;
+    border: none;
 }
 
-@media (min-width: 788px) {
+@media (min-width: 768px) {
     .boton {
         width: auto;
     }
+}
+
+.boton:hover {
+    cursor: pointer;
 }
 
 /* Tipografia */
@@ -79,6 +84,26 @@ h1, h2, h3 {
 .titulo span {
     font-size: 2rem;
 }
+
+/* Utilidades */
+.w-sm-100 {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .w-sm-100 {
+        width: auto;
+    }
+}
+
+.flex {
+    display: flex;
+}
+
+.alinear-derecha {
+    justify-content: flex-end;
+}
+
 
 /* Navegación principal */
 
@@ -144,4 +169,81 @@ h1, h2, h3 {
 .contenido-hero .ubicacion {
     display: flex;
     align-items: flex-end;
+}
+@media (min-width: 768px) {
+    .servicios {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1.5rem;
+    }
+}
+
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicio h3 {
+    color: var(--secundario);
+    font-weight: normal;
+}
+
+.servicio p {
+    line-height: 2;
+    text-align: center;
+}
+
+.iconos {
+    background-color: var(--primario);
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.formulario {
+    background-color: var(--gris);
+    width: min(60rem, 100%);
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.formulario fieldset {
+    border: none;
+}
+
+.formulario legend {
+    color: var(--primario);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    font-size: 1.8rem;
+
+}
+
+.contenedor-campos {
+
+}
+
+.campo {
+    margin-bottom: 1rem;
+}
+
+.campo label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: .5rem;
+    color: var(--blanco);
+}
+
+.campo .input-text {
+    width: 100%;
+    padding: 1.5rem;
+    border: none;
+    border-radius: .5rem;
 }
